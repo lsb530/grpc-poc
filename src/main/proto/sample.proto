@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+//package org.boki;
+
+//option java_outer_classname = "Boki";
+
+option java_multiple_files = true;
+
+//service SampleService {
+//  rpc SingleRequestSingleResponse (HelloRequest) returns (HelloResponse);
+//  rpc SingleRequestManyResponse (HelloRequest) returns (stream HelloResponse);
+//  rpc ManyRequestSingleResponse (stream HelloRequest) returns (HelloResponse);
+//  rpc ManyRequestManyResponse (stream HelloRequest) returns (stream HelloResponse);
+//}
+
+service SampleService {
+  rpc SingleRequestSingleResponse (HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+  string hello = 1;
+}
+
+message HelloResponse {
+  string world = 1;
+}
